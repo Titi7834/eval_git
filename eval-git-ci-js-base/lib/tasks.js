@@ -23,4 +23,4 @@ function reset() {
   nextId = 1;
 }
 
-module.exports = { getTasks, reset };
+module.exports = { getTasks, reset, addTask, toggleTask };
