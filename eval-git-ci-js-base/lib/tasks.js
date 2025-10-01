@@ -8,6 +8,16 @@ function getTasks() {
   return tasks;
 }
 
+
+function toggleTask(id) {
+  const task = tasks.find(task => task.id === id);
+  if (task) {
+    task.done = !task.done;
+    return true;
+  }
+  return false;
+}
+
 function addTask(name) {
   const task = {
     id: nextId++,
@@ -16,6 +26,7 @@ function addTask(name) {
   };
   tasks.push(task);
   return task;
+
 }
 
 function reset() {
@@ -23,4 +34,4 @@ function reset() {
   nextId = 1;
 }
 
-module.exports = { getTasks, reset, addTask };
+module.exports = { getTasks, reset, addTask, toggleTask };
