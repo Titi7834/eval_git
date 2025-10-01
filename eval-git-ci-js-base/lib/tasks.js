@@ -1,7 +1,7 @@
 
 // Simple in-memory task list
 let tasks = [];
-let nextId = 1;
+let nextId = 2;
 
 
 function getTasks() {
