@@ -23,6 +23,7 @@ test('should toggle task status', () => {
 
 test('should return false when toggling non-existent task', () => {
   expect(toggleTask(999)).toBe(false);
+});
 
 // Tests for addTask
 test('should add a task with trimmed name', () => {
