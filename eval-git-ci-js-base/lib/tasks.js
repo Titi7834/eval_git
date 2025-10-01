@@ -8,6 +8,15 @@ function getTasks() {
   return tasks;
 }
 
+function addTask(name) {
+  const task = {
+    id: nextId++,
+    name: name.trim(),
+    done: false
+  };
+  tasks.push(task);
+  return task;
+}
 
 function reset() {
   tasks = [];
