@@ -16,6 +16,7 @@ function toggleTask(id) {
     return true;
   }
   return false;
+}
 
 function addTask(name) {
   const task = {
