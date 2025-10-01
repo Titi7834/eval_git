@@ -1,13 +1,16 @@
 
 // Simple in-memory task list
 let tasks = [];
-let nextId = 2;
+let nextId = 1;
 
 
 function getTasks() {
   return tasks;
 }
 
+function countDone() {
+  return tasks.filter(task => task.done).length;
+}
 
 function toggleTask(id) {
   const task = tasks.find(task => task.id === id);
@@ -26,7 +29,6 @@ function addTask(name) {
   };
   tasks.push(task);
   return task;
-
 }
 
 function reset() {
@@ -34,4 +36,4 @@ function reset() {
   nextId = 1;
 }
 
-module.exports = { getTasks, reset, addTask, toggleTask };
+module.exports = { getTasks, reset, countDone, addTask, toggleTask };
